@@ -1,0 +1,1 @@
+enum EnNavBar{home,search,calender,job,profile}

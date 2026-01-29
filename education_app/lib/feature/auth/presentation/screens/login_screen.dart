@@ -3,6 +3,7 @@
 import 'package:education_app/core/widgets/custom_text_feild.dart';
 import 'package:education_app/feature/auth/presentation/screens/sign_up_screen.dart';
 import 'package:education_app/feature/auth/presentation/widgets/button_widget.dart';
+import 'package:education_app/feature/main/presentation/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +17,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 25.w),
@@ -41,7 +43,13 @@ class LoginScreen extends StatelessWidget {
                     CustomTextFeild(hint_text: "############",validator: Validators.passValidator,controller: passController,secure: true,),
                   ],
                 ),
-                ButtonWidget(tapped: (){}, title:"Log in")
+                ButtonWidget(tapped: (){
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => MainScreen()),
+                        (route) => false,
+                  );
+                }, title:"Log in")
               ],
 
             ),

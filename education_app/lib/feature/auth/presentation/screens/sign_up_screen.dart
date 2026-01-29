@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/validators.dart';
 import '../../../../core/widgets/custom_text_feild.dart';
+import '../../../main/presentation/main_screen.dart';
 import '../widgets/button_widget.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -17,6 +18,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 25.w),
@@ -62,7 +64,13 @@ class SignUpScreen extends StatelessWidget {
                     CustomTextFeild(hint_text: "############",validator: Validators.passValidator,controller: passController,secure: true,),
                   ],
                 ),
-                ButtonWidget(tapped: (){}, title:"Log in")
+                ButtonWidget(tapped:(){
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => MainScreen()),
+                        (route) => false,
+                  );
+                }, title:"Log in")
               ],
 
             ),
