@@ -1,0 +1,1 @@
+enum EnForm{email,password,conformPass}
