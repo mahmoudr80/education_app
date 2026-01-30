@@ -15,8 +15,8 @@ import '../../../search/presentation/search_screen.dart';
 import '../../domain/clsJob.dart';
 
 class  JobScreen extends StatefulWidget {
-  const JobScreen ({super.key});
-
+  const JobScreen ({super.key, this.searchTapped,});
+final  void Function()?searchTapped;
   @override
   State<JobScreen> createState() => _JobScreenState();
 }
@@ -37,14 +37,16 @@ setState(() {
       child:showFirst? Column(
         children: [
           Row(
-            spacing: 100.w,
+            spacing: 95.w,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
                   onPressed:tapped,
                   icon: Icon(Icons.favorite_border,size: 24.r)),
               Text("Career",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 24.sp,color: Colors.white),),
-              Icon(Icons.search_outlined,size: 24.r,),
+              IconButton(
+                onPressed: widget.searchTapped,
+                  icon: Icon(Icons.search_outlined,size: 24.r,)),
             ],
           ),
           SizedBox(height: 36.h,),

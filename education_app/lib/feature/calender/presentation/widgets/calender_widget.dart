@@ -6,12 +6,12 @@ import '../../../../core/global/cls_global.dart';
 
 class CalenderWidget extends StatelessWidget {
  const  CalenderWidget({super.key,  this.taskCount = 3, required this.title,required this.start,
-   required this.end });
+   required this.end, this.tapped });
 final int taskCount;
 final String title;
 final TimeOfDay start ;
 final TimeOfDay end;
-
+final void Function()? tapped;
    String format(TimeOfDay t) {
      final h = t.hour.toString().padLeft(2, '0');
      final m = t.minute.toString().padLeft(2, '0');
@@ -47,11 +47,14 @@ final TimeOfDay end;
           children: [
             Assets.images.desktopIcon.image(),
             Expanded(child: Text("Online",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14.sp,color: Colors.black))),
-            Container(
-                height: 28.r,
-                width: 28.r,
-                decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(100.r)),
-                child: Icon(Icons.south_east_outlined,color: Colors.white,))
+            InkWell(
+              onTap: tapped,
+              child: Container(
+                  height: 28.r,
+                  width: 28.r,
+                  decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(100.r)),
+                  child: Icon(Icons.south_east_outlined,color: Colors.white,)),
+            )
           ],
         )
       ],

@@ -18,7 +18,10 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Color(0xff1A1A1A),leading:IconButton(onPressed: (){
+        Navigator.pop(context);
+      },
+        icon:Icon(Icons.arrow_back_ios ,color: Colors.white,),),),
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 25.w),

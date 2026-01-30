@@ -159,6 +159,38 @@ class $AssetsImagesGen {
   AssetGenImage get uiUxImg =>
       const AssetGenImage('assets/images/ui_uxImg.png');
 
+  /// File path: assets/images/verifyIcon.png
+  AssetGenImage get verifyIcon =>
+      const AssetGenImage('assets/images/verifyIcon.png');
+
+  /// File path: assets/images/video2Img.png
+  AssetGenImage get video2Img =>
+      const AssetGenImage('assets/images/video2Img.png');
+
+  /// File path: assets/images/video3Img.png
+  AssetGenImage get video3Img =>
+      const AssetGenImage('assets/images/video3Img.png');
+
+  /// File path: assets/images/video4Img.png
+  AssetGenImage get video4Img =>
+      const AssetGenImage('assets/images/video4Img.png');
+
+  /// File path: assets/images/video5Img.png
+  AssetGenImage get video5Img =>
+      const AssetGenImage('assets/images/video5Img.png');
+
+  /// File path: assets/images/video6Img.png
+  AssetGenImage get video6Img =>
+      const AssetGenImage('assets/images/video6Img.png');
+
+  /// File path: assets/images/video7Img.png
+  AssetGenImage get video7Img =>
+      const AssetGenImage('assets/images/video7Img.png');
+
+  /// File path: assets/images/videoImg.png
+  AssetGenImage get videoImg =>
+      const AssetGenImage('assets/images/videoImg.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     brutalist44,
@@ -198,6 +230,14 @@ class $AssetsImagesGen {
     searchNav,
     skyIcon,
     uiUxImg,
+    verifyIcon,
+    video2Img,
+    video3Img,
+    video4Img,
+    video5Img,
+    video6Img,
+    video7Img,
+    videoImg,
   ];
 }
 

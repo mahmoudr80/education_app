@@ -18,8 +18,8 @@ import '../../domain/cls_course.dart';
 import 'notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
+  const HomeScreen({super.key, required this.profileTapped,});
+final void Function()profileTapped;
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -43,9 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
          children: [
         Row(
          children: [
-      CircleAvatar(
-          radius: 25.r,
-          backgroundImage: AssetImage(Assets.images.profileHome.path)),
+      InkWell(onTap:widget.profileTapped ,
+        child: CircleAvatar(
+            radius: 25.r,
+            backgroundImage: AssetImage(Assets.images.profileHome.path)),
+      ),
       SizedBox(width: 15.w,),
       Expanded(child: Text("Hello, Jane",style: TextStyle(color: Color(0xffAB93E0),fontSize: 16.sp,fontWeight: FontWeight.w600),)),
       IconButton(

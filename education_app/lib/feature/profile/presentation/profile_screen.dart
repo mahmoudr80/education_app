@@ -1,5 +1,6 @@
 
 import 'package:education_app/core/widgets/custom_goto_container.dart';
+import 'package:education_app/feature/auth/presentation/screens/welcome_screen.dart';
 import 'package:education_app/feature/home/presentation/screens/notification_screen.dart';
 import 'package:education_app/feature/search/presentation/search_screen.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +85,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         CustomGotoContainer(title: "Support"),
         CustomGotoContainer(title: "About the app"),
 
-        TextButton(onPressed: (){}, child: Text(
+        TextButton(onPressed: (){
+          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>WelcomeScreen(),),(route) => false,);
+        }, child: Text(
           "Log out",
           style: TextStyle(
             fontSize: 20.sp,

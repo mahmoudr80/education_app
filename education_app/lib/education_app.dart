@@ -47,7 +47,7 @@ class EducationApp extends StatelessWidget {
 
         themeMode: ThemeMode.dark,
 
-        home: MainScreen(),
+        home: SplashScreen(),
       ),
     );
   }
