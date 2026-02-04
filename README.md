@@ -50,38 +50,7 @@ feature/
 </p>
 
 
-🎓 Education App
 
-A scalable, offline-ready learning app built with a feature-based architecture, designed for smooth educational content delivery and seamless video lessons. Powered by Hive for ultra-fast local storage and YouTube Video Player for integrated media learning.
-
-Learn anywhere. Watch lessons smoothly. Keep progress offline.
-
-🚀 Highlights
-
-🧩 Feature-based architecture for scalable development
-
-📦 Hive local database for high-performance offline storage
-
-▶️ YouTube Video Player integration for embedded lessons
-
-📴 Offline-first lesson access & progress saving
-
-⚡ Fast startup and lightweight performance
-
-📱 Mobile-first responsive UI
-
-🏗 Architecture
-
-Each feature is self-contained to improve maintainability:
-
-feature/
- ├── data/
- ├── domain/
- ├── presentation/
- └── widgets/
-
-
-This structure enables independent development, easier testing, and clean separation of concerns.
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/69406097-43b8-4a0e-9b45-1a130cdffa6b" width="250"/></td>
