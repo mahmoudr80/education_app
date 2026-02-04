@@ -8,7 +8,7 @@ Learn anywhere. Watch lessons smoothly. Keep progress offline.
 
 🧩 Feature-based architecture for scalable development
 
-📦 Hive local database for high-performance offline storage
+<p align="center"> 📦 Hive-powered storage • ▶️ YouTube lesson playback • ⚡ Fast & modular architecture </p>
 
 ▶️ YouTube Video Player integration for embedded lessons
 
