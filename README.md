@@ -14,6 +14,15 @@ This education app offers structured courses and lecture content powered by GitH
   <tr>
     <td><img src="https://github.com/user-attachments/assets/7c204441-22c4-41a3-b02e-ecfe56ad0524" width="250"/></td>
     <td><img src="https://github.com/user-attachments/assets/98db44cd-85f1-469d-a40e-55ff769bfaec" width="250"/></td>
-    <td></td>
+     <td><img src="https://github.com/user-attachments/assets/67ec049b-c793-4d95-87a0-0b1ad30b5c90" width="250"/></td>
+    <td>
+        <tr>
+    <td><img src="https://github.com/user-attachments/assets/1e4ab744-686e-4c81-a8a9-fcf61287ae2d" width="250"/></td>
+    <td><img src="https://github.com/user-attachments/assets/6286a2e1-cff8-43c3-b682-8d4eb8409720" width="250"/></td>
+     <td><img src="https://github.com/user-attachments/assets/11dbf0c5-3579-4007-82f0-7aa74f5eb25e" width="250"/></td>
+    <td>
+    
+
+    </td>
   </tr>
 </table>
