@@ -7,8 +7,8 @@ import '../../domain/clsJob.dart';
 
 
 class JobCard extends StatefulWidget {
-
-  const JobCard({super.key,required this.job});
+  final void Function()? favTapped;
+  const JobCard({super.key,required this.job, this.favTapped});
   final Job job;
 
   @override
@@ -21,6 +21,8 @@ class _JobCardState extends State<JobCard> {
     void tapped(){
 setState(() {
   widget.job.favourite=!widget.job.favourite;
+    widget.favTapped!();
+
 });
     }
     Color color1 =  Global.getRandomColor();

@@ -1,8 +1,8 @@
 import '../../../gen/assets.gen.dart';
 import '../domain/clsJob.dart';
 
-class JobData{
-  static List<Job>listJobs= [
+
+   List<Job>listOfAllJobs= [
     Job(favourite: true,title: "UX Designer",company: "Google",description: "We are looking for a talented UX Designer experienced in crafting intuitive user interfaces. Y...",
         experience: "Middle",location: "California, USA",period: "Full-time",iconPath: Assets.images.googleIcon.path)
     ,    Job(title: "QA Engineer",company: "Microsoft",description: "Our Company looking for a professional QA Engineer. Hybrid work format and pleasant office.",
@@ -20,4 +20,3 @@ class JobData{
     ,   Job(title: "Content Creator",company: "Lsn Hayni",description: "We are looking for a talented Content Creator experienced in crafting intuitive user interfaces. Y...",
         experience: "Junior",location: "New York, USA",period: "Full-time",iconPath: Assets.images.lsnIcon.path),
   ];
-}

@@ -1,5 +1,6 @@
 
 
+import 'package:education_app/feature/home/data/course_data.dart';
 import 'package:education_app/feature/home/domain/cls_course.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,8 +9,9 @@ import '../../../../core/global/cls_global.dart';
 import '../../../../gen/assets.gen.dart';
 
 class CourseWidget extends StatefulWidget {
-  const CourseWidget({super.key, required this.course});
-final Course course;
+   CourseWidget({super.key, required this.course, this.favTapped});
+ Course course;
+ final void Function()? favTapped;
   @override
   State<CourseWidget> createState() => _CourseWidgetState();
 }
@@ -20,6 +22,8 @@ class _CourseWidgetState extends State<CourseWidget> {
     void tapped(){
       setState(() {
         widget.course.favourite = !widget.course.favourite;
+        listOfCourses[listOfCourses.indexOf(widget.course)].favourite=
+            widget.course.favourite;
       });
     }
     return Container(
@@ -50,7 +54,10 @@ class _CourseWidgetState extends State<CourseWidget> {
                 ],
               ),
               InkWell(
-                onTap: tapped,
+                onTap: (){
+                  tapped();
+                    widget.favTapped!();
+                },
                 child: Container(
                   height: 28.r,
                   width: 28.r,

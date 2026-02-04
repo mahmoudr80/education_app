@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomGotoContainer extends StatelessWidget {
-  const CustomGotoContainer({super.key, required this.title});
+  const CustomGotoContainer({super.key, required this.title, this.tapped});
 final String title;
+final void Function()?tapped;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -12,7 +13,7 @@ final String title;
           fontWeight: FontWeight.w600,
           color: Colors.white)),
       trailing:  Icon(Icons.arrow_forward_ios, size: 16.r,color: Colors.white,),
-      onTap: () {},
+      onTap: tapped,
 
     );
     ;

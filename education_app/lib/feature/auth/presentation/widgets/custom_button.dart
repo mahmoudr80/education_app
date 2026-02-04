@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.title, required this.backgroundColor,required this.tapped});
+  const CustomButton({super.key, required this.title, this.backgroundColor = Colors.indigo,required this.tapped});
   final String title;
   final Color  backgroundColor;
   final void Function()? tapped;
