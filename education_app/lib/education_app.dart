@@ -12,6 +12,7 @@ import 'package:education_app/feature/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+
 class EducationApp extends StatelessWidget {
   const EducationApp({super.key});
 

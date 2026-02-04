@@ -1,12 +1,32 @@
 import 'package:education_app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class LearningWidget extends StatelessWidget {
-  const LearningWidget({super.key,required this.tapped, required this.title, required this.imagePath});
+class LearningWidget extends StatefulWidget {
+  const LearningWidget({super.key,required this.tapped, required this.title, required this.imagePath, required this.videoId});
 final void Function()?tapped;
 final String title;
 final String imagePath;
+final String videoId;
+
+  @override
+  State<LearningWidget> createState() => _LearningWidgetState();
+}
+
+class _LearningWidgetState extends State<LearningWidget> {
+  late YoutubePlayerController controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = YoutubePlayerController(initialVideoId: widget.videoId,flags: YoutubePlayerFlags(
+      mute: false,enableCaption: true,autoPlay: true,controlsVisibleAtStart: true,
+    ));
+    controller.unMute();
+    controller.setVolume(100);
+  }
+
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -16,7 +36,7 @@ final String imagePath;
           Row(
             children: [
               IconButton(
-                onPressed: tapped,
+                onPressed: widget.tapped,
                 icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
@@ -36,7 +56,7 @@ final String imagePath;
           ),
           SizedBox(height: 24.h),
           Text(
-            title,
+            widget.title,
             style: TextStyle(
               color: Color(0xffFFFFFF),
               fontSize: 20.sp,
@@ -51,10 +71,22 @@ final String imagePath;
               height: 188.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.r),
-                image:DecorationImage(image:Image.asset(imagePath).image,
+                image:DecorationImage(image:Image.asset(widget.imagePath).image,
                   fit:BoxFit.cover,
                 ),
               ),
+                child: YoutubePlayerBuilder(player: YoutubePlayer(controller: controller,onReady:  () {
+                  controller.unMute();
+                  controller.setVolume(100); // ensure max volume
+                },
+                  showVideoProgressIndicator: true,
+                progressIndicatorColor: Colors.red,),
+                    builder: (context,player) {
+                  return Center(
+                    child: player,
+                  );
+
+                    },),
             ),
             Positioned(
                 left: 20.w,

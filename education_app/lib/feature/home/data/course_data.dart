@@ -5,8 +5,8 @@ import '../../../gen/assets.gen.dart';
 import '../domain/cls_course.dart';
 import '../domain/en_course.dart';
 
-class CourseData{
-  static List<Course> listOfCourses= [
+
+   List<Course> listOfCourses= [
    Course(favourite:true,title: "UI/UX", subTitle: "designer",
       enCourse:EnCourse.course,enCourseCategory: EnCourseCategory.design,hours: 147,price: 800,rating: 4.7,subscribers: 10000,
       backImgPath: Assets.images.cusUiuxImg.path),
@@ -53,4 +53,3 @@ class CourseData{
       enCourse:EnCourse.lecture,enCourseCategory: EnCourseCategory.programming,hours: 58,price: 120,rating: 4.9,subscribers: 17000,),
 
   ];
-}
