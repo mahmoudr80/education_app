@@ -1,4 +1,4 @@
-🎓 #Education App
+🎓 Education App
 
 A scalable, offline-ready learning app built with a feature-based architecture, designed for smooth educational content delivery and seamless video lessons. Powered by Hive for ultra-fast local storage and YouTube Video Player for integrated media learning.
 
